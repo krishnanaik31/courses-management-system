@@ -1,0 +1,19 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+     <h2>List of Courses, Price</h2>
+    <ul>
+        {% for course in course_list %}
+            <li> {{ course }}, {{ course.price }}</li>
+        {% endfor %}
+    </ul>
+    <h1>You can place an order here.</h1>
+    <form method="post">
+    {% csrf_token %}
+     <table border="1">
+      {{ form }}
+     </table>
+    <button  class="btn btn-success" type="submit">Submit</button>
+    </form>
+{#<p><a href="{% url 'myapp:index' %}">Index Page</a></p>#}
+
+{% endblock %}

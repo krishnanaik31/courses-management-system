@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+    {% if msg %}
+        <b>{{ msg }}</b>
+    {% endif %}
+    {% if student_details %}
+        {% for obj in student_details %}
+            <p><b>First Name:</b> {{ obj.first_name }}</p>
+            <p><b>Last Name:</b> {{ obj.last_name }}</p>
+        {% endfor %}
+        <b>Interested Topics: </b>
+        {% for obj in course_details %}
+            <li>{{ obj.interested_in__name }}</li>
+        {% endfor %}<br>
+        <b>Ordered Courses: </b>
+        {% for obj in order_details %}
+            <li>{{ obj }}</li>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

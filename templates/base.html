@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+{#    <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}" />#}
+    <title>E-Learning WebApp - {% block title %}Welcome!{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+<div>
+    <h1>{% block myhdg %}Hello {{ request.user.first_name }} {{ request.user.last_name }} {% endblock %}</h1>
+    {% block body_block %}*** {% endblock %}
+</div>
+<hr />
+<div>
+    <ul>
+        <li class="hbar1 col-8"><a href="/myapp/about/">Find out about our ELearning site</a></li>
+        <li class="hbar1"><a href = "{% url 'myapp:index' %}">Click here to return to main page</a><br/></li>
+        <li class="hbar1"><a href="/myapp/courses/">Find out our courses</a></li>
+        {% if request.user.is_authenticated %}
+            <li><a href="{% url 'myapp:logout' %}">Logout</a></li>
+            <li><a href="/myapp/my_account">My Account</a></li>
+        {% else %}
+            <li><a href="{% url 'myapp:login' %}">Login Here</a></li>
+            <li><a href="{% url 'myapp:register' %}">Register Here</a></li>
+        {% endif %}
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+from django.core.management import call_command
+ 
+output= open('dumpdata.json', 'w')
+call_command('dumpdata', 'myapp', format='json', indent=3, stdout=output)
+output.close()

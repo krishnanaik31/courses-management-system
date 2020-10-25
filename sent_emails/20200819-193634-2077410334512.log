@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: naik118@uwindsor.ca
+Date: Wed, 19 Aug 2020 23:36:34 -0000
+Message-ID: <159788019441.8392.14924393262350454401@Krishna.home>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/reset/MQ/5j6-552230ae4ef1697cc3b9/
+
+Your username, in case you’ve forgotten: krishna
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

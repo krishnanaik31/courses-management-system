@@ -1,0 +1,38 @@
+Group 31
+
+Implemented Required Features:
+
+	1.  In admin.py create a class CourseAdmin(admin.ModelAdmin), register this with the admin site and
+		show the name, topic, price, hours, and for_everyone fields, for each Course, in the admin interface page
+		that lists all Courses. 
+	2.  In admin.py write an action add_50_to_hours(…)for CourseAdmin class that will add 10 to the
+		current value of the hours field for the selected courses and save the updated value in the database.
+	3.  In admin.py create a class StudentAdmin(admin.ModelAdmin), register this with the admin site and
+		show the first_name, last_name, city fields. Define upper_case_name(…) function to display the
+		student’s first and last name in uppercase. Make the short description of this function Student Full
+		Name. 
+	4.  Add ‘register’ view that allows a user to register as a Student. Update myapp/urls.py and create
+		register.html with suitable content. This feature involves creating a ModelForm named RegisterForm
+		that is based on Student model. The form should include the fields: username, password, first name, last
+		name, city, interested_in. Design the form with labels and widgets as appropriate. Instantiate this form
+		in register() view and pass it to register.html for display. 
+	5.  Update the user_login view created in Lab 8 so that if an user who is not logged in goes to url
+		‘/myapp/myaccount/’ they will be directed to the login page and after successful login they will go
+		directly to the ‘/myapp/myaccount/’ page (instead of the main index page).
+	6.  Update base.html so that if a user is logged in, it will display Logout (myapp/logout) and My Account
+		(myapp/myaccount) links. Otherwise it will display Register Here (myapp/register) and Login
+		(myapp/login) links. Each link should go to the corresponding view function defined earlier (in Lab 8 or in
+		step 4 or 5 above).
+	7.  Update base.html so that if a user is logged in, it will display “Hello <first_name><last_name>” instead of
+		“Hello User”. Here <first_name> and <last_name> are the first name and last name of the user that is
+		currently logged in, respectively.
+	8. Add a ‘Forgot password’ link on login page. It should email a new password to the user.
+	
+	
+Implemented Optional Features:
+
+	1.  Save db in JSON format. Load initial data using fixtures
+	2.  Add validators for price field in Course model so that it is between 100 and 200. If you’re asked to add
+		validators to one more field, which field you’ll choose.
+	3.  Upload image file. Add an optional field image field for a Student to upload his/her photo.
+	4.  Use Bootstrap to style your pages.

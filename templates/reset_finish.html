@@ -1,0 +1,6 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+  <p>
+    You are good to go with your new password and can <a href="{% url 'myapp:login' %}">Login</a> now.
+  </p>
+{% endblock %}
